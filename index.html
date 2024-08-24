@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fatma</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skins/color-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!--switecher-->
+  <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <link rel="stylesheet" href="./css/style-switcher.css">
+  <link rel="icon" href="./images/f.png" type="image/x-icon" />
+  <style>
+    /* #preeloader {
+
+      background: url('./images/loadeer.gif') no-repeat center center;
+      background-size: 100%;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      z-index: 100;
+    } */
+    @media (max-width:991px) {
+      /* #preeloader {
+
+        background: #b134e7 url('./images/loadeer.gif') no-repeat center center;
+        background-size: 10%;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 100;
+      } */
+    }
+
+    #follower {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    #follower #circle1 {
+      position: absolute;
+      -webkit-animation: pulse 2s infinite;
+      /* Chrome, Safari, Opera */
+      animation: pulse 2s infinite;
+      background: rgb(95, 99, 158);
+      border-radius: 50%;
+      height: 0em;
+      width: 0em;
+      margin-top: 0em;
+      margin-left: 0em;
+    }
+
+    #follower #circle2 {
+      position: absolute;
+      -webkit-animation: pulse 4s infinite;
+      /* Chrome, Safari, Opera */
+      animation: pulse 10s infinite;
+      background: rgba(128, 120, 124, 0.8);
+      border-radius: 50%;
+      height: 0em;
+      width: 0em;
+      margin-top: 0em;
+      margin-left: 0em;
+    }
+
+    @-moz-keyframes pulse {
+      0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+
+      50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+      }
+
+      100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+    }
+
+    @-webkit-keyframes pulse {
+      0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+
+      50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+      }
+
+      100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+    }
+
+    @-o-keyframes pulse {
+      0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+
+      50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+      }
+
+      100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+
+      50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+      }
+
+      100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "Hd1MpMdCWVB5HtfKe",
+      });
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div id="follower">
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+  </div>
+
+  <div id="preeloader"></div>
+  <div class="main-container">
+    <div class="aside">
+      <div class="logo">
+        <a href=""><span>F</span>atma</a>
+      </div>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+      <ul class="nav">
+        <li><a href="#home" class="active"> <i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"> <i class="fa fa-user"></i>About</a></li>
+        <li><a href="#services"> <i class="fa fa-list"></i>Services</a></li>
+        <li><a href="#portfolio"> <i class="fa fa-briefcase"></i>Portfolio</a></li>
+        <li><a href="#contact"> <i class="fa fa-comments"></i>Contact</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <section class="home section " id="home">
+        <div class="container">
+          <div class="row">
+            <div class="home-info padd-15">
+              <h3 class="hello">
+                Hello, my name is <span class="name">Fatma Ben Aissa</span>
+              </h3>
+              <h3 class="my-profession">I' m a <span class="typing">Web Developer</span></h3>
+              <p>I am a junior Full stack JS developer ( MERN Stack Developer ) specializing in building
+                and designing exceptional digital experiences. I am a person with a great professional
+                conscience, responsible, dynamic, serious, and I would be honored to be able to
+                integrate your company
+
+              </p>
+              <a href="#contact" class="btn hire-me">Hire Me</a>
+            </div>
+            <div class="home-img padd-15">
+              <img src="./images/fatma.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <section class=" about section" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>About Me</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-content padd-15">
+              <div class="row">
+                <div class="about-text padd-15">
+                  <h3> I'm <span>` Fatma Ben Aissa `</span></h3>
+                  <p>I am an accomplished Full Stack Developer with expertise in JavaScript, React, Node.js, Express,
+                    and MongoDB. I have a
+                    proven track record of creating user-friendly, responsive, and efficient web applications.
+
+                  </p>
+
+                </div>
+              </div>
+              <div class="row ">
+
+                <div class="skills padd-15 ">
+
+                  <div class="row fuml">
+                    <div class="discc">
+                      <!-- html -->
+                      <div class="skill-item padd-15">
+                        <h5>HTML</h5>
+
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+                      <!-- CSS -->
+                      <div class="skill-item padd-15">
+                        <h5>Css</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+                      <!-- CSS tailwind -->
+                      <div class="skill-item padd-15">
+                        <h5>Css tailwind</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%;"></div>
+                          <div class="skill-percent">80%</div>
+                        </div>
+                      </div>
+                      <!-- Bootstrap -->
+                      <div class="skill-item padd-15">
+                        <h5>Bootstrap</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%;"></div>
+                          <div class="skill-percent">90%</div>
+                        </div>
+                      </div>
+                      <!-- JavaScript -->
+                      <div class="skill-item padd-15">
+                        <h5>Java Script</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%;"></div>
+                          <div class="skill-percent">90%</div>
+                        </div>
+                      </div>
+                      <!-- React-Js -->
+                      <div class="skill-item padd-15">
+                        <h5>React Js</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+                      <!-- Redux-Toolkit -->
+                      <div class="skill-item padd-15">
+                        <h5>Redux Toolkit</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+                      <!-- MONGODB -->
+                      <div class="skill-item padd-15">
+                        <h5>Mongo Db</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+                      <!-- NODEJS -->
+                      <div class="skill-item padd-15">
+                        <h5>Node Js</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+
+
+
+                      <!-- git/github -->
+                      <div class="skill-item padd-15">
+                        <h5> Git/Github</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%;"></div>
+                          <div class="skill-percent">90%</div>
+                        </div>
+                      </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="discc">
+                      <div class="skill-item padd-15">
+                        <h5>Typescript</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 60%;"></div>
+                          <div class="skill-percent">60%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Nextjs</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 60%;"></div>
+                          <div class="skill-percent">60%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Wordpress</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 70%;"></div>
+                          <div class="skill-percent">70%</div>
+                        </div>
+                      </div>
+                      <!-- python -->
+                      <div class="skill-item padd-15">
+                        <h5>Python</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%;"></div>
+                          <div class="skill-percent">80%</div>
+                        </div>
+                      </div>
+
+
+                      <!-- JAVA -->
+                      <div class="skill-item padd-15">
+                        <h5>Java</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 70%;"></div>
+                          <div class="skill-percent">70%</div>
+                        </div>
+                      </div>
+                      <!-- C -->
+
+                      <div class="skill-item padd-15">
+                        <h5>Language C</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%;"></div>
+                          <div class="skill-percent">80</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Language C++</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 70%;"></div>
+                          <div class="skill-percent">70</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>php</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%;"></div>
+                          <div class="skill-percent">80</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Matlab</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%;"></div>
+                          <div class="skill-percent">80</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Microsoft Office</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 100%;"></div>
+                          <div class="skill-percent">100%</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="personal-info padd-25 ">
+
+                    <div class="info-item">
+                      <p>Birthday : <span>06 January 1993</span></p>
+                    </div>
+                    <div class="info-item">
+                      <p>Age : <span>31</span></p>
+                    </div>
+                    <div class="info-item">
+                      <p>Web site: <span>fatmabenaissa.github.io/Me/</span></p>
+                    </div>
+                    <div class="info-item">
+                      <p>Email<span>fatmabenaissa1@gmail.com</span></p>
+                    </div>
+                    <div class="info-item">
+                      <p>Phone : <span>+216 21650391</span></p>
+                    </div>
+                    <div class="info-item">
+                      <p>City : <span>Tunisia, Gabes</span></p>
+
+                    </div>
+                    <div class="info-item">
+                      <p>Freelance: <span>Available</span></p>
+
+                    </div>
+                    <div class="info-item">
+                      <p>Job : <span>Full Stack Web Developer </span></p>
+
+                    </div>
+                    <div class="row">
+                      <div class="buttons padd-15">
+                        <a href="assets/cv_fatmaBenAissa_dev eng.pdf" download="cv_fatmaBenAissa_dev eng.pdf"
+                          class="btn" target="_blank" class="btn">Download CV</a>
+                        <a href="#contact" class="btn hire-me">Hire Me</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <iframe width="0" height="0" src="https://www.youtube.com/embed/q6kzYPfhilg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+                <iframe width="0" height="0" src="https://www.youtube.com/embed/q6kzYPfhilg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe><iframe width="0" height="0" src="https://www.youtube.com/embed/q6kzYPfhilg"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+
+
+
+                <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2019 - 2024
+                            </h3>
+                            <h4 class="timeline-title">Doctorate in Electrical Engineering (specializing in Artificial
+                              Intelligence)</h4>
+                            <p class="timeline-text">In National Engineering School of Gabes (E.N.I.G) </p>
+
+                            <h5>Title of thesis:</h5>Development of an image detection system for
+                            images generated by GAN neural networks
+                            <h5>Keywords:</h5>fake image detection, GAN, deep learning
+                          </div>
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> March 2021 - August 2021
+                            </h3>
+                            <h4 class="timeline-title">FULL STACK WEB DEVELOPER Training</h4>
+                            <p class="timeline-text">GOMYCODE Gabes </p>
+                            <p>GOMYCODE is a prominent training center in Tunisia specializing in
+                              technology and software development. The center
+                              offers hands-on training in various programming languages and frameworks, with a focus on
+                              full stack development using
+                              the MERN stack (MongoDB, Express.js, React, Node.js).</p>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2014 - 2027
+                            </h3>
+                            <h4 class="timeline-title">Master of Research in Computer Science and Multimedia</h4>
+                            <p class="timeline-text">In Higher Institute of Computing and Multimedia of Gabes </p>
+
+                            <h5>Title of final project:</h5>Unsupervised Features Extraction Using a Multi-view Self
+                            Organizing Map for
+                            Image Classification
+                            <h5>Keywords:</h5>Feature extraction,Self-organizing feature maps,Image classification
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2011 - 2014
+                            </h3>
+                            <h4 class="timeline-title">Fundamental licence in computer science</h4>
+                            <p class="timeline-text">In Higher Institute of Computing and Multimedia of Gabes</p>
+
+                            <h5>Title of final project:</h5> Creating a research laboratory using the Moodle platform
+                            <h5>Keywords:</h5>research laboratory,Moodle,php, easyphp
+                          </div>
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2007 - 2011
+                            </h3>
+                            <h4 class="timeline-title">Bachelor's degree in computer science</h4>
+                            <p class="timeline-text">Chebbi High School of Gabes </p>
+                            <p>The Bachelor of computer Science (B.info.)
+                              is an Bachelor's that allows both to work in computer science and to pursue
+                              engineering
+                              studies.</p>
+                          </div>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience padd-15">
+                    <h3 class="title">Experience</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> Since 2022
+                            </h3>
+                            <h4 class="timeline-title">Freelance Web Developer</h4>
+
+                            <p class="timeline-text">Self-employed|Gabes- Tunisia</p>
+
+                            <p>Creating custom web applications using various technologies, depending on the
+                              requirements of each project. This
+                              includes the creation of static websites, dynamic websites, e-commerce platforms, and
+                              other customized solutions.
+                              Utilizing the latest technologies and tools to develop robust and high-performance web
+                              applications.
+                            </p>
+
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> Since 2022
+                            </h3>
+                            <h4 class="timeline-title">Full Stack Js Instructor </h4>
+
+                            <p class="timeline-text">GOMYCODE|Gabes- Tunisia</p>
+                            <ul class="exp">
+                              <li>Specialized teacher in MERN stack technologies</li>
+                              <li>Guiding students in mastering web development concepts and practices</li>
+                              <li>Deep expertise in MongoDB, Express.js, React.js, and Node.js</li>
+                              <li>Designing and developing modern, dynamic web applications</li>
+                              <li>Pedagogical approach fostering a holistic understanding of the MERN ecosystem</li>
+                              <li>Encouraging creativity and innovation among students</li>
+                            </ul>
+
+                          </div>
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2021- 2021
+                            </h3>
+
+                            <p class="timeline-text">Higher Institute of Computer Science and
+                              Multimedia of Gabes (ISIMG) | Gabes- Tunisia</p>
+
+                            <h4 class="timeline-title"> Computer science teacher </h4>
+                            <p>As a computer science teacher at ISIMG, I taught various modules
+                              across two semesters. In the first semester, I focused
+                              on SOAP and Java, providing students with a strong foundation in web services and
+                              object-oriented programming. In the
+                              second semester, I shifted to teaching Python and Web Development, covering HTML, CSS,
+                              JavaScript, PHP, and MySQL,
+                              equipping students with the skills needed to build dynamic and responsive web
+                              applications.</p>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2020 - 2021
+                            </h3>
+                            <h4 class="timeline-title"> Computer science teacher </h4>
+
+                            <p class="timeline-text">Institute Maghreb Of Sciences Economiques
+                              and Technologie (IMSET) | Gabes- Tunisia</p>
+                            <p>As a computer science teacher at IMSET, I taught a variety of modules across two
+                              semesters. These included Web
+                              Development, Databases (SQL and PL/SQL), Network Administration (Packet Tracer),
+                              Algorithms and Data Structures,
+                              Learning Programming Languages (Python, Java), and Introduction to Computer Science (C2I).
+                            </p>
+                          </div>
+
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2019 - 2020
+                            </h3>
+                            <h4 class="timeline-title"> Computer science teacher </h4>
+
+                            <p class="timeline-text">Excellence Private College & High School
+                              | Gabes- Tunisia</p>
+
+                            <p>
+                              At Excellence Private College & High School, I taught computer science. Over the course of
+                              two
+                              semesters, the modules I covered included Programming (Python/Scratch, App Inventor) and
+                              3D Animation with SketchUp 3.
+                            </p>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2017 - 2018
+                            </h3>
+                            <h4 class="timeline-title"> IT Manager </h4>
+
+                            <p class="timeline-text">General Equipment Company SOGEQ l Gabes- Tunisia</p>
+
+                            <p>
+                              As an IT Manager at the company, my primary role involved overseeing the sales and
+                              purchasing processes using dedicated
+                              software solutions. This responsibility required meticulous management of all
+                              transactions, ensuring that sales and buy
+                              operations were executed efficiently and accurately through the software.
+                            </p>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+      </section>
+
+
+      <section class="service section" id="services">
+        <div class="contrainer">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Services</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-palette"></i>
+                </div>
+
+                <h4>Web Design</h4>
+                <p> I can convert any XD , Figma Design to crative design with the integration of animation .</p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-laptop"></i>
+                </div>
+
+                <h4>Clean Code</h4>
+                <p>And this is by writing a clean code with comments also by copoing the alpha structure .</p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-palette"></i>
+                </div>
+
+                <h4>Responsive Design</h4>
+                <p>I can build responsive web design for all devices mobile
+                  , tablet and desktop.</p>
+              </div>
+            </div>
+
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-code"></i>
+                </div>
+
+                <h4>Web development</h4>
+                <p>I can build a full stack website with Html Css Java-Script Bootstrap5 React-Js ES6
+                  Redux-Tolkiit Express Mongo-DB Fire-Base and Strapi with modern libraries and frameworks..</p>
+              </div>
+            </div>
+
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-bullhorn"></i>
+
+                </div>
+                <h4>Task management</h4>
+                <p>Effective task management is crucial for maintaining productivity,
+                  reducing stress, and achieving both short-term and long-term goals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="portfolio section" id="portfolio">
+
+        <div class="row2">
+          <div class="section-title padd-15">
+            <h2>Portfolio</h2>
+          </div>
+        </div>
+
+        <!-- Menu de navigation pour filtrer les projets -->
+        <div class="portfolio-menu padd-15">
+          <ul>
+            <!-- <li class="filter-item active" data-filter="all">All</li>  -->
+            <li class="filter-item active" data-filter="html">HTML/CSS/JS</li>
+            <li class="filter-item" data-filter="react">ReactJS</li>
+            <li class="filter-item" data-filter="mern">MERN</li>
+          </ul>
+        </div>
+
+        <div class="container_port">
+          <!-- Vos éléments de projet -->
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://head-boost.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/projet-1.png" alt="project">
+                  <h3 class="portfolio-item-title">HEAD BOOST</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Head Boost</h3>
+                    <span> This is a HTML end CSS project. it's like a vitrine web site</span>
+
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://head-boost.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Head-Boost.git" target="_blank">Github Link</a></div>
+          </div>
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://groco-red.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/projet-6.png" alt="project">
+                  <h3 class="portfolio-item-title">GroCo</h3>
+                  <div class="portfolio-item-description">
+                    <h3>GroCo</h3>
+                    <span>Groco is an e-commerce web site it's a HTML and CSS prject</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="github"> <a href="https://groco-red.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Groco.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://travel-flax-nu.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/project-20.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Travel</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Tourism</h3>
+                    <span>Logo is an travel Agency website It's a HTML and CSS project</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="github"><a href="https://travel-flax-nu.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/Travel.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://tourist-beta-topaz.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/project-13.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Tourist</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Tourist</h3>
+                    <span>Tourist is an travel website It's a HTML and CSS project </span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"><a href="https://tourist-beta-topaz.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/Tourist.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+          <div class="portfolio-item padd-15" data-category="html">
+
+            <a href="https://cofee-shop-eight.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/projet-3.png" alt="project">
+                  <h3 class="portfolio-item-title">Cofee Shop</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Cofenna</h3>
+                    <span>Cofenna it's a coffeshop web site create with HTML CSS and DOM</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://cofee-shop-eight.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Cofee-shop.git" target="_blank">Github Link</a></div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://spinner-gules-psi.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/projet-8.png" alt="project">
+                  <h3 class="portfolio-item-title">Spinner</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Spinner</h3>
+                    <span>A game create with HTML CSS and JavaScript</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://spinner-gules-psi.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Spinner.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://flakes-rouge.vercel.app/" target="_blank">
+
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/project-16.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Flakes</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Movie App</h3>
+                    <span>A Movie App created by HTML and Css</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://flakes-rouge.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Flakes.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://shopping-card-mu.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./images/project-9.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Shopping Card</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Shopping Card</h3>
+                    <span>A Shopping carte created by HTML CSS and DOM</span>
+                  </div>
+                </div>
+
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://shopping-card-mu.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Shopping-Card" target="_blank">Github Link</a></div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://food-lover-ashen.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/project-11.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Food Lover</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Food Lover</h3>
+                    <span>Food restorent web site created with HTML CSS </span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://food-lover-ashen.vercel.app/" target="_blank">Preview</a><a
+                href="https://github.com/AissaFatmaa/Food-Lover.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+          <div class="portfolio-item padd-15" data-category="html">
+            <a href="https://tatoo-house.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/project-12.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Tatto House</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Tatto House</h3>
+                    <span>Tatto House a Tattoer website created With HTML and CSS</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"><a href="https://tatoo-house.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/Tatoo-House.git" target="_blank">Github Link</a></div>
+          </div>
+
+          <!-- Projet ReactJS ici -->
+          <div class="portfolio-item padd-15" data-category="react">
+            <a href="https://movieapp-redux.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/netflixy.png" alt="project">
+                  <h3 class="portfolio-item-title">Netflixy</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Netflixy</h3>
+                    <span>Netflixy MovieApp created by React and Redux Cruds... </span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"><a href="https://movieapp-redux.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/Netflixy-redux.git" target="_blank">Github Link</a></div>
+          </div>
+
+
+          <div class="portfolio-item padd-15" data-category="react">
+
+            <a href="https://academia-omega-eight.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/project-15.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Academia</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Academia</h3>
+                    <span>Academia is an education web site it's a React JS project. </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </a>
+            <div class="github"><a href="https://academia-omega-eight.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/Academia.git" target="_blank">Github Link</a>
+            </div>
+          </div>
+
+          <div class="portfolio-item padd-15" data-category="react">
+            <a href="https://gosto-five.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/project-14.PNG" alt="project">
+                  <h3 class="portfolio-item-title">Gosto</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Gosto</h3>
+                    <span>Gosto is a magasine website .This project is created by React Redux Reducer</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"><a href="https://gosto-five.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/Gosto.git" target="_blank">Github Link</a>
+            </div>
+          </div>
+
+          <div class="portfolio-item padd-15" data-category="react">
+            <a href="https://to-do-list-theta-lime-20.vercel.app/" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/todolist.png" alt="project">
+                  <h3 class="portfolio-item-title">Todo App</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Todo App</h3>
+                    <span>A todo_app created bY React js and redux Tolkiit</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"><a href="https://to-do-list-theta-lime-20.vercel.app/" target="_blank">Preview</a> <a
+                href="https://github.com/AissaFatmaa/To-Do-List" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <!-- Projet MERN ici -->
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/Myschool.png" alt="project">
+                  <h3 class="portfolio-item-title">My school</h3>
+                  <div class="portfolio-item-description">
+                    <h3>My school</h3>
+                    <span>MERN app: My School is MERN application used for the managmenent of Oued Ennour school</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/My-School" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/bel event.png" alt="project">
+                  <h3 class="portfolio-item-title">Bel Event</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Bel Event</h3>
+                    <span>MERN app: An Event planner application created with MERN stack</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/Bel-Event" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/Mystore.png" alt="project">
+                  <h3 class="portfolio-item-title">My Store</h3>
+                  <div class="portfolio-item-description">
+                    <h3>My Store</h3>
+                    <span>MERN app: E-commerce application</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/My-Store" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/el khomssa.png" alt="project">
+                  <h3 class="portfolio-item-title">El Khomssa</h3>
+                  <div class="portfolio-item-description">
+                    <h3>El Khomssa</h3>
+                    <span>MERN app: Booking traditional accessories</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/El-Khomssa" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/Beauty center.png" alt="project">
+                  <h3 class="portfolio-item-title">Beauty Center</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Beauty Center</h3>
+                    <span>MERN app: Reservation for a service in beauty center</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/Beauty-Center" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/mycoach.png" alt="project">
+                  <h3 class="portfolio-item-title">My Coach</h3>
+                  <div class="portfolio-item-description">
+                    <h3>My Coach</h3>
+                    <span>MERN app: get training program from a professional coach</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/My-Coach" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <div class="portfolio-item padd-15" data-category="mern">
+
+            <a href="" target="_blank">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+
+                  <img src="./images/benna.png" alt="project">
+                  <h3 class="portfolio-item-title">Benna</h3>
+                  <div class="portfolio-item-description">
+                    <h3>Benna</h3>
+                    <span>MERN app: Sweet Tunisian Patisserie</span>
+                  </div>
+                </div>
+
+              </div>
+            </a>
+            <div class="github"> <a href="https://github.com/AissaFatmaa/Benna" target="_blank">Github Link</a>
+            </div>
+          </div>
+          <!-- Ajoutez les autres projets ici -->
+        </div>
+
+      </section>
+
+
+
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <h3 class="contact-title padd-15"> Have You Any Questions ?</h3>
+          <h4 class="contact-sub-title padd-15">I'M AT YOU SERVICES</h4>
+          <div class="row">
+            <div class="contact-info-item padd-15">
+              <div class="icon"> <i class="fa fa-phone"></i></div>
+              <h4>Call Me On</h4>
+              <p>+21621650391</p>
+            </div>
+            <div class="contact-info-item padd-15">
+              <div class="icon"> <i class="fa fa-map-marker-alt"></i></div>
+              <h4>Office</h4>
+              <p>Freelance</p>
+            </div>
+            <div class="contact-info-item padd-15">
+              <div class="icon"> <i class="fa fa-envelope"></i></div>
+              <h4>Email</h4>
+              <p>fatmabenaissa1@gmail.com</p>
+            </div>
+            <div class="contact-info-item padd-15">
+              <div class="icon"> <i class="fa fa-globe-europe"></i></div>
+              <h4>Linkedin</h4>
+              <p>https://www.linkedin.com/in/ben-aissa-fatma-607877127/</p>
+            </div>
+          </div>
+          <h3 class="contact-title padd-15"> SEND ME AN EMAIL</h3>
+          <h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE TO MESSAGES</h4>
+          <div class="row">
+            <form onsubmit="return notify()">
+              <div class="contact-form padd-15">
+                <div class="row">
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email" name="email" id="email">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <div class="mess">
+                        <input type="text" class="form-control" placeholder="Message" name="message" id="message">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <button type="submit" class="btn" onclick="notify()">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1') "></span>
+      <span class="color-2" onclick="setActiveStyle('color-2') "></span>
+      <span class="color-3" onclick="setActiveStyle('color-3') "></span>
+      <span class="color-4" onclick="setActiveStyle('color-4') "></span>
+      <span class="color-5" onclick="setActiveStyle('color-5') "></span>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+  <script src="./js/style-switcher.js"></script>
+  <script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+      loader.style.display = "none";
+    })
+  </script>
+  <script>(function () {
+        var follower, init, mouseX, mouseY, positionElement, printout, timer;
+
+        follower = document.getElementById('follower');
+
+        printout = document.getElementById('printout');
+
+        mouseX = (event) => {
+          return event.clientX;
+        };
+
+        mouseY = (event) => {
+          return event.clientY;
+        };
+
+        positionElement = (event) => {
+          var mouse;
+          mouse = {
+            x: mouseX(event),
+            y: mouseY(event)
+          };
+          follower.style.top = mouse.y + 'px';
+          return follower.style.left = mouse.x + 'px';
+        };
+
+        timer = false;
+
+        window.onmousemove = init = (event) => {
+          var _event;
+          _event = event;
+          return timer = setTimeout(() => {
+            return positionElement(_event);
+          }, 1);
+        };
+
+      }).call(this);
+
+  </script>
+
+</body>
+
+</html>
